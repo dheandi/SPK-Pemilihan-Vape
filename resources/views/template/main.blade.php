@@ -222,13 +222,13 @@
         $(".log-out").on('click', function(e) {
             e.preventDefault();
             Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: 'Kamu Yakin?',
+                text: "Kamu Yakin Akan Keluar?",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#7367f0',
                 cancelButtonColor: '#82868b',
-                confirmButtonText: 'Yes, Log Out !'
+                confirmButtonText: 'Yaa Yakin !'
             }).then((result) => {
                 if (result.isConfirmed) {
                     $('#logging-out').submit()

@@ -77,21 +77,28 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">SPK Vape cuy</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <a class="navbar-brand fw-bold text-primary" href="#">
+        <i class="bi bi-fire"></i> Vape Cuy
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="/login">Masuk</a>
-          </li>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+            <a class="nav-link" href="/login">
+                <button class="btn btn-primary fw-semibold">
+                <i class="bi bi-box-arrow-in-right me-1"></i> Masuk
+                </button>
+            </a>
+            </li>
         </ul>
-      </div>
+        </div>
     </div>
-  </nav>
+</nav>
 
   <!-- Carousel Vape -->
   <div id="carouselVape" class="carousel slide mt-2" data-bs-ride="carousel" data-bs-interval="3000">
@@ -128,38 +135,67 @@
     </div>
   </div>
 
-  <!-- Konten SPK -->
-  <div class="container py-4">
-    <h1 class="text-center mb-4">SPK Pemilihan Vape</h1>
-    <form action="{{ route('vape.cari') }}" method="POST">
-        @csrf
-        <div class="form-group mb-3">
-            <label>Harga Maksimal</label>
-            <input type="number" name="harga_maks" class="form-control" required>
-        </div>
-        <div class="form-group mb-3">
-            <label>Baterai Minimal</label>
-            <input type="number" name="baterai_min" class="form-control" required>
-        </div>
-        <div class="form-group mb-3">
-            <label>Pengisian Daya</label>
-            <select name="pengisian_daya" class="form-control" required>
-                <option value="Cepat">Cepat</option>
-                <option value="Normal">Normal</option>
-            </select>
-        </div>
-        <div class="form-group mb-3">
-            <label>Kemudahan Penggunaan</label>
-            <select name="kemudahan_penggunaan" class="form-control" required>
-                <option value="Mudah">Mudah</option>
-                <option value="Sedang">Sedang</option>
-                <option value="Expert">Expert</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Cari Vape</button>
-    </form>
-  </div>
 
+
+    <div class="container py-5">
+        <div class="row g-4">
+          <!-- Kiri: Form SPK -->
+          <div class="col-lg-6">
+            <div class="card shadow rounded-4 border-0">
+              <div class="card-body p-4">
+                <h2 class="fw-bold mb-4 text-primary text-center">SPK Pemilihan Vape</h2>
+                <form action="{{ route('vape.cari') }}" method="POST">
+                    @csrf
+                  <div class="mb-3">
+                    <label for="harga_maks" class="form-label">Harga Maksimal</label>
+                    <input type="number" name="harga_maks" id="harga_maks" class="form-control form-control-lg" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="baterai_min" class="form-label">Baterai Minimal</label>
+                    <input type="number" name="baterai_min" id="baterai_min" class="form-control form-control-lg" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="pengisian_daya" class="form-label">Pengisian Daya</label>
+                    <select name="pengisian_daya" id="pengisian_daya" class="form-select form-select-lg" required>
+                      <option value="Cepat">Cepat</option>
+                      <option value="Normal">Normal</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="kemudahan_penggunaan" class="form-label">Kemudahan Penggunaan</label>
+                    <select name="kemudahan_penggunaan" id="kemudahan_penggunaan" class="form-select form-select-lg" required>
+                      <option value="Mudah">Mudah</option>
+                      <option value="Sedang">Sedang</option>
+                      <option value="Expert">Expert</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary w-100 btn-lg">Cari Vape</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kanan: Info Aplikasi -->
+          <div class="col-lg-6">
+            <div class="card shadow-sm rounded-4 bg-light border-0 h-100">
+              <div class="card-body p-4 d-flex flex-column justify-content-center">
+                <h4 class="text-secondary fw-bold mb-3">Tentang Aplikasi</h4>
+                <p class="mb-2">
+                  Aplikasi ini merupakan Sistem Pendukung Keputusan (SPK) untuk membantu pengguna memilih vape terbaik berdasarkan beberapa kriteria seperti harga, kapasitas baterai, jenis pengisian daya, dan kemudahan penggunaan.
+                </p>
+                <p class="mb-2">
+                  Metode yang digunakan adalah <strong>SMART (Simple Multi Attribute Rating Technique)</strong> yang memberikan nilai skor pada setiap pilihan berdasarkan bobot preferensi pengguna.
+                </p>
+                <p class="text-muted small mt-3">Dikembangkan untuk tujuan pembelajaran dan pengambilan keputusan yang lebih cerdas dan cepat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
   <!-- Script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

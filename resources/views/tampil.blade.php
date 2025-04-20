@@ -29,11 +29,16 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">SPK Vape Cuy</a>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+            <i class="bi bi-fire"></i> Vape Cuy
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
 
   <!-- Rekomendasi Vape -->
   <div class="container py-4">
@@ -63,7 +68,7 @@
 
     <!-- Tombol Kembali -->
     <div class="text-center mt-4">
-        <a href="{{ route('hitungan.showForm') }}" class="btn btn-danger btn-lg">Kembali ke Menu Awal</a>
+        <a href="{{ route('hitungan.showForm') }}" class="btn btn-danger btn-lg">Hitung Kembali</a>
       </div>
     </div>
   </div>

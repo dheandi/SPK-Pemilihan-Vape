@@ -42,7 +42,7 @@ class HitunganController extends Controller
         });
 
         // Urutkan berdasarkan skor tertinggi
-        $vapeScores = $vapeScores->sortByDesc('score');
+        $vapeScores = $vapeScores->sortByDesc('score')->take(3);;
 
         // Kirimkan hasil pencarian ke view
         return view('tampil', compact('vapeScores'));
