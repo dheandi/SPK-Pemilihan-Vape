@@ -1,13 +1,9 @@
-# Andis Dev
-## _Turorial Login Register CRUD Laravel 10_
+# SPK Pemilihan Vape
 
 ## Features
 
-- Login User
-- Logout User
-- Register User
-- Validate email
-- CRUD Laravel 10
+- Login Admin
+- CRUD Data Vape
 - Validation
 - Sweat Alert
 - Datatable
@@ -27,38 +23,61 @@
 
 ## Installation
 
-Download or clone source code <br>
-create database laravel
+## 📂 Clone Project
 
-Install the dependencies and start the server.
+Untuk menyalin repository ini ke komputer lokal, jalankan perintah berikut di terminal:
 
-run composer update <br>
-run php artisan migrate:fresh <br>
-run php artisan serve <br>
+```bash
+git clone https://github.com/dheandi/SPK-Pemilihan-Vape.git
+```
 
-open link at your browser
-http://127.0.0.1:8000
+## ⚙️ Instalasi & Setup (Laravel)
 
-## Demo Link
-https://login-register-crud-laravel.andisdev.tech/
+Jika ini merupakan project Laravel, ikuti langkah-langkah berikut:
 
-## Screenshoot
-![logo](https://github.com/AndiSyarif/login-register-crud-laravel-10/blob/main/public/assets/img/ss7.png)
-![logo](https://github.com/AndiSyarif/login-register-crud-laravel-10/blob/main/public/assets/img/ss8.png)
-![logo](https://github.com/AndiSyarif/login-register-crud-laravel-10/blob/main/public/assets/img/ss9.png)
-![logo](https://github.com/AndiSyarif/login-register-crud-laravel-10/blob/main/public/assets/img/ss10.png)
-![logo](https://github.com/AndiSyarif/login-register-crud-laravel-10/blob/main/public/assets/img/ss11.png)
-![logo](https://github.com/AndiSyarif/login-register-crud-laravel-10/blob/main/public/assets/img/ss12.png)
-![logo](https://github.com/AndiSyarif/login-register-crud-laravel-10/blob/main/public/assets/img/ss1.png)
-![logo](https://github.com/AndiSyarif/login-register-crud-laravel-10/blob/main/public/assets/img/ss2.png)
-![logo](https://github.com/AndiSyarif/login-register-crud-laravel-10/blob/main/public/assets/img/ss3.png)
-![logo](https://github.com/AndiSyarif/login-register-crud-laravel-10/blob/main/public/assets/img/ss4.png)
-![logo](https://github.com/AndiSyarif/login-register-crud-laravel-10/blob/main/public/assets/img/ss5.png)
-![logo](https://github.com/AndiSyarif/login-register-crud-laravel-10/blob/main/public/assets/img/ss6.png)
+### 1. Install Dependency
+```bash
+composer install
+```
 
-## License
+### 2. Salin File Environment
+```bash
+cp .env.example .env
+```
 
-Andis Dev
+### 3. Generate Key Aplikasi
+```bash
+php artisan key:generate
+```
 
-**Free for learn !**
+### 4. Setup Database
+- Buat database baru di MySQL.
+- Edit konfigurasi database di file `.env` sesuai dengan setting MySQL kamu:
+  ```env
+  DB_DATABASE=nama_database
+  DB_USERNAME=root
+  DB_PASSWORD=
+  ```
+
+### 5. Jalankan Migrasi
+```bash
+php artisan migrate
+```
+
+### 6. Jalankan DB Seeder
+```bash
+php artisan db:seed 
+```
+
+### 7. Jalankan Server Lokal
+```bash
+php artisan serve
+```
+
+Akses melalui browser: [http://localhost:8000](http://localhost:8000)
+
+## ✅ Fitur Utama
+- Penilaian dengan metode SMART
+- Input data alternatif dan kriteria
+- Perhitungan nilai akhir dan rekomendasi
 
