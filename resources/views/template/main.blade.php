@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/assets/dist/css/adminlte.min.css">
+    @yield('style')
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -127,7 +128,7 @@
 
             </div>
             <!-- Default to the left -->
-            <strong>Copyright &copy; 2023 <a href="https://andisdev.tech">Andis Dev</a>.</strong> All rights
+            <strong>Copyright &copy;{{ now()->year }} <a href="https://andisdev.tech">Andis Dev</a>.</strong> All rights
             reserved.
         </footer>
     </div>
@@ -135,6 +136,7 @@
 
     <!-- REQUIRED SCRIPTS -->
 
+    @yield('script')
     <!-- jQuery -->
     <script src="/assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
@@ -185,13 +187,13 @@
             e.preventDefault();
             var form = $(this).closest("form");
             Swal.fire({
-                title: 'Are you sure?',
-                text: "You will not be able to revert this!",
+                title: 'Yakin Hapus?',
+                text: "Yakin ingin menghapus data ini?",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#7367f0',
                 cancelButtonColor: '#82868b',
-                confirmButtonText: 'Yes, delete!'
+                confirmButtonText: 'Yaa, Hapus'
             }).then((result) => {
                 if (result.isConfirmed) {
                     form.submit();
@@ -223,7 +225,7 @@
             e.preventDefault();
             Swal.fire({
                 title: 'Kamu Yakin?',
-                text: "Kamu Yakin Akan Keluar?",
+                text: "Kamu yakin akan keluar?",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#7367f0',

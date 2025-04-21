@@ -147,12 +147,12 @@
                 <form action="{{ route('vape.cari') }}" method="POST">
                     @csrf
                   <div class="mb-3">
-                    <label for="harga_maks" class="form-label">Harga Maksimal</label>
+                    <label for="harga_maks" class="form-label">Harga</label>
                     <input type="number" name="harga_maks" id="harga_maks" class="form-control form-control-lg" required>
                   </div>
 
                   <div class="mb-3">
-                    <label for="baterai_min" class="form-label">Baterai Minimal</label>
+                    <label for="baterai_min" class="form-label">Kapasitas Baterai</label>
                     <input type="number" name="baterai_min" id="baterai_min" class="form-control form-control-lg" required>
                   </div>
 
@@ -185,12 +185,12 @@
               <div class="card-body p-4 d-flex flex-column justify-content-center">
                 <h4 class="text-secondary fw-bold mb-3">Tentang Aplikasi</h4>
                 <p class="mb-2">
-                  Aplikasi ini merupakan Sistem Pendukung Keputusan (SPK) untuk membantu pengguna memilih vape terbaik berdasarkan beberapa kriteria seperti harga, kapasitas baterai, jenis pengisian daya, dan kemudahan penggunaan.
+                  Aplikasi ini merupakan Sistem Pendukung Keputusan (SPK) untuk membantu pengguna memilih vape terbaik bagi pemula berdasarkan beberapa kriteria seperti harga, kapasitas baterai, jenis pengisian daya, dan kemudahan penggunaan.
                 </p>
                 <p class="mb-2">
                   Metode yang digunakan adalah <strong>SMART (Simple Multi Attribute Rating Technique)</strong> yang memberikan nilai skor pada setiap pilihan berdasarkan bobot preferensi pengguna.
                 </p>
-                <p class="text-muted small mt-3">Dikembangkan untuk tujuan pembelajaran dan pengambilan keputusan yang lebih cerdas dan cepat.</p>
+                <p class="text-muted small mt-3">Dibuat oleh Grup 5 Mata Kuliah SPK</p>
               </div>
             </div>
           </div>

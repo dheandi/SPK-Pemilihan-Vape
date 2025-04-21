@@ -22,6 +22,84 @@
     </div>
     <!-- /.content-header -->
 
+     <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Bobot Penilaian</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+            <div class="row">
+                <!-- Bobot Baterai -->
+                <div class="col-md-6 mb-3">
+                  <h6>Bobot Baterai</h6>
+                  <table class="table table-bordered table-sm table-striped small">
+                    <thead class="table-light"><tr><th>Label</th><th>Perhitungan</th><th>Bobot</th></tr></thead>
+                    <tbody>
+                      <tr><td>A</td><td>500 - 1500</td><td>0.6</td></tr>
+                      <tr><td>B</td><td>1500 - 2500</td><td>0.8</td></tr>
+                      <tr><td>C</td><td>2500 - 3500</td><td>1.0</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Pengisian Daya -->
+                <div class="col-md-6 mb-3">
+                  <h6>Pengisian Daya</h6>
+                  <table class="table table-bordered table-sm table-striped small">
+                    <thead class="table-light"><tr><th>Jenis</th><th>Bobot</th></tr></thead>
+                    <tbody>
+                      <tr><td>Cepat</td><td>1.0</td></tr>
+                      <tr><td>Normal</td><td>0.5</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- Kemudahan Penggunaan -->
+                <div class="col-md-6 mb-3">
+                  <h6>Kemudahan Penggunaan</h6>
+                  <table class="table table-bordered table-sm table-striped small">
+                    <thead class="table-light"><tr><th>Kemudahan</th><th>Bobot</th></tr></thead>
+                    <tbody>
+                      <tr><td>Mudah</td><td>1.0</td></tr>
+                      <tr><td>Sedang</td><td>0.6</td></tr>
+                      <tr><td>Expert</td><td>0.3</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Rentang Harga -->
+                <div class="col-md-6 mb-3">
+                  <h6>Rentang Harga</h6>
+                  <table class="table table-bordered table-sm table-striped small">
+                    <thead class="table-light"><tr><th>Rentang</th><th>Bobot</th></tr></thead>
+                    <tbody>
+                      <tr><td>≤ 200.000</td><td>1.0</td></tr>
+                      <tr><td>201.000 – 400.000</td><td>0.8</td></tr>
+                      <tr><td>401.000 – 600.000</td><td>0.6</td></tr>
+                      <tr><td>601.000 – 800.000</td><td>0.4</td></tr>
+                      <tr><td>801.000 – 1.000.000+</td><td>0.2</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Info -->
+
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
@@ -31,6 +109,9 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="text-right">
+                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#staticBackdrop">
+                                    <i class="fa-regular fa-circle-question"></i> Info
+                                </button>
                                 <a href="/vape" class="btn btn-warning btn-sm"><i class="fa-solid fa-arrow-rotate-left"></i>
                                     Back
                                 </a>

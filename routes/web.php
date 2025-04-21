@@ -30,8 +30,6 @@ Route::get('/', [DashboardController::class, 'index'])->middleware('auth');
 
 Route::resource('/vape', VapeController::class)->middleware('auth');
 Route::get('/', [HitunganController::class, 'showForm'])->name('vape.showForm')->Middleware('guest');
-
-// Proses pencarian vape setelah form di-submit
 Route::post('/cari-vape', [HitunganController::class, 'cari'])->name('vape.cari');
 Route::get('/hitungan', [HitunganController::class, 'showForm'])->name('hitungan.showForm');
 
